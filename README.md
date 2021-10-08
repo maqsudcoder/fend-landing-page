@@ -4,11 +4,9 @@
 
 ## Frontend Nanodegree Course [link](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
 
-##
 
-##
 
-# [Open live]()
+## [Open live]()
 
 -   [About](#about)
 -   [Languages](#languages)
