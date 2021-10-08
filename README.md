@@ -6,7 +6,7 @@
 
 
 
-## [Open live]()
+## [Open live](https://masud-fend-landing-page.netlify.app/)
 
 -   [About](#about)
 -   [Languages](#languages)
