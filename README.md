@@ -2,7 +2,7 @@
 
 # Landing Page Project by [Udacity](https://udacity.com)
 
-## Frontend Nanodegree Course []link](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
+## Frontend Nanodegree Course [link](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
 
 ##
 
