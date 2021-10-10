@@ -23,7 +23,6 @@ buildTheNav();
 const scrollToSection = () => {
 	const allLinks = document.querySelectorAll('.menu__link');
 
-	console.log(allLinks);
 	for (let i = 0; i < allLinks.length; i++) {
 		allLinks[i].addEventListener('click', () => {
 			allLinks[i].scrollTo(sections[i]);
