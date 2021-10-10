@@ -19,6 +19,23 @@ const buildTheNav = () => {
 
 buildTheNav();
 
+////Navigate to section on click
+const scrollToSection = () => {
+	const allLinks = document.querySelectorAll('.menu__link');
+
+	console.log(allLinks);
+	for (let i = 0; i < allLinks.length; i++) {
+		allLinks[i].addEventListener('click', () => {
+			allLinks[i].scrollTo(sections[i]);
+
+			// for checking
+			console.log(`Yay I'm clicked 👏😊🙌`);
+		});
+	}
+};
+
+scrollToSection();
+
 //// Add active cass to element on scroll
 // add active class to an element
 const addActiveClass = sec => {
@@ -32,7 +49,7 @@ const removeActiveClass = sec => {
 
 // check if an element in viewport then return true
 const inViewport = elementOffset => {
-	return elementOffset < 120 && elementOffset >= -120;
+	return elementOffset < 200 && elementOffset >= -200;
 };
 
 // MAIN FUNCTION: activate section
@@ -42,16 +59,17 @@ const activateSection = () => {
 		let elementOffset = section.getBoundingClientRect().top;
 
 		// check element in viewport or not
-		let checkInViewport = inViewport(section, elementOffset);
+		let checkInViewport = inViewport(elementOffset);
 
 		if (checkInViewport) {
 			// if in viewport
-			section.classList.add('active'); // add `active` class
+			addActiveClass(section); // add `active` class
 		} else {
-			section.classList.remove('active'); // else remove `active` class
+			removeActiveClass(section); // else remove `active` class
 		}
 	});
 };
 
 // run functon on scrolling
+// window.addEventListener('scroll', actkivateSection);
 window.addEventListener('scroll', activateSection);
