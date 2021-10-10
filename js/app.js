@@ -27,9 +27,6 @@ const scrollToSection = () => {
 	for (let i = 0; i < allLinks.length; i++) {
 		allLinks[i].addEventListener('click', () => {
 			allLinks[i].scrollTo(sections[i]);
-
-			// for checking
-			console.log(`Yay I'm clicked 👏😊🙌`);
 		});
 	}
 };
