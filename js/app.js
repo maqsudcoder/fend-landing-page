@@ -11,7 +11,7 @@ const buildTheNav = () => {
 	let list = '';
 
 	sections.forEach(section => {
-		list += `<li><a href='#${section.id}' class='menu__link'>${section.dataset.nav}</a></li>`;
+		list += `<li><a class='menu__link'>${section.dataset.nav}</a></li>`;
 	});
 
 	navbarListEl.innerHTML = list;
@@ -22,10 +22,12 @@ buildTheNav();
 ////Navigate to section on click
 const scrollToSection = () => {
 	const allLinks = document.querySelectorAll('.menu__link');
+	console.log(allLinks);
 
 	for (let i = 0; i < allLinks.length; i++) {
 		allLinks[i].addEventListener('click', () => {
-			allLinks[i].scrollTo(sections[i]);
+			sections[i].scrollIntoView();
+			console.log('clicked');
 		});
 	}
 };
