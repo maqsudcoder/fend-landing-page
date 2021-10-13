@@ -40,7 +40,7 @@ const activateSection = function () {
 	for (let i = 0; i < sections.length; i++) {
 		let elementOffset = sections[i].getBoundingClientRect().top;
 
-		if (elementOffset <= 250 && elementOffset >= -250) {
+		if (elementOffset <= 300 && elementOffset >= -300) {
 			sections[i].classList.add('active');
 			navbarLinks[i].classList.add('active-link');
 		} else {
