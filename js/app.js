@@ -22,12 +22,16 @@ for (let i = 0; i < sections.length; i++) {
 	scrollTo(aEl, sections[i]);
 }
 
+// it should be in the beggining of code but we should need the navigation first before using it 😜
+const navbarLinks = document.querySelectorAll('.menu__link');
+
 // creating scrollTo function
 function scrollTo(a, section) {
 	// when a is slicked scroll to section
 
-	a.addEventListener('click', () => {
-		section.scrollIntoView();
+	a.addEventListener('click', e => {
+		e.preventDefault();
+		section.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
 	});
 }
 
@@ -38,8 +42,10 @@ const activateSection = function () {
 
 		if (elementOffset <= 200 && elementOffset >= -200) {
 			sections[i].classList.add('active');
+			navbarLinks[i].classList.add('active-link');
 		} else {
 			sections[i].classList.remove('active');
+			navbarLinks[i].classList.remove('active-link');
 		}
 	}
 };
