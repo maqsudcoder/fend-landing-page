@@ -86,7 +86,7 @@ section {
 @media screen and (max-width: 600px) {
 	.navbar__menu .menu__link {
 		padding: 0.4em;
-		font-size: 12px;
+		font-size: 8px;
 	}
 }
 
